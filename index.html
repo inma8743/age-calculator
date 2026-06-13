@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="생년월일과 기준일을 입력하면 만 나이, 연 나이, 한국식 세는 나이, 다음 생일까지 남은 날을 한 번에 계산하는 무료 만 나이 계산기입니다.">
+  <meta name="description" content="생년월일과 기준일을 입력하면 만 나이, 연 나이, 한국식 세는 나이, 다음 생일까지 남은 날을 한 번에 계산하는 무료 만 나이 계산기입니다. 디데이와 무료 계산기도 함께 확인하세요.">
   <meta name="google-site-verification" content="iJYo0s5IVucjVPlcUXP11HltZW35jnzpXC0C4rTFapw">
   <meta name="keywords" content="만 나이 계산기, 나이 계산기, 연 나이 계산, 한국식 나이, 생일 계산기">
   <meta name="robots" content="index, follow">
@@ -89,6 +89,9 @@
     .result span { color: #62647f; font-size: 14px; }
     .notice { margin-top: 14px; color: #62647f; line-height: 1.65; }
     .guide { margin: 22px 0; line-height: 1.75; }
+    .next-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 22px 0; }
+    .next-card { display: block; padding: 16px; border: 1px solid #e0e7ff; border-radius: 18px; color: #4f46e5; background: rgba(255,255,255,.9); text-decoration: none; font-weight: 900; box-shadow: 0 10px 28px rgba(45,42,110,.06); }
+    .next-card span { display: block; margin-top: 5px; color: #64748b; font-size: 12px; font-weight: 700; line-height: 1.5; }
     .formula {
       padding: 14px 16px;
       border-left: 4px solid #4f46e5;
@@ -102,7 +105,7 @@
     footer a { color: inherit; }
     @media (max-width: 760px) {
       header { padding-top: 34px; }
-      .calculator, .result-grid { grid-template-columns: 1fr; }
+      .calculator, .result-grid, .next-grid { grid-template-columns: 1fr; }
       .card, .guide { padding: 20px; }
       .ad iframe, .ad ins { max-width: 100% !important; }
     }
@@ -145,6 +148,13 @@
       </script>
       <p class="ad-note">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받을 수 있습니다.</p>
     </div>
+
+    <section class="next-grid" aria-label="많이 찾는 다음 계산기">
+      <a class="next-card" href="https://dday-calculator-seven.vercel.app/">디데이 계산기<span>생일·시험·기념일까지 남은 날짜</span></a>
+      <a class="next-card" href="https://password-generator-self-seven.vercel.app/calculators.html">무료 계산기 모음<span>평수·퍼센트·디데이 계산기로 이동</span></a>
+      <a class="next-card" href="https://area-calculator-dun.vercel.app/">평수 계산기<span>아파트 평수와 제곱미터 변환</span></a>
+      <a class="next-card" href="https://stock-board-ten.vercel.app/">국장 레이더<span>삼성전자·SK하이닉스·국내 주식 뉴스</span></a>
+    </section>
 
     <section class="guide">
       <h2>만 나이 계산 기준</h2>
