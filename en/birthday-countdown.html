@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-adsense-account" content="ca-pub-4587553505034907">
+  <meta name="description" content="Free birthday countdown calculator. Enter your birthday to see how many days are left until your next birthday.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://age-calculator-mu-two.vercel.app/en/birthday-countdown.html">
+  <link rel="alternate" hreflang="ko" href="https://age-calculator-mu-two.vercel.app/birthday-countdown.html">
+  <link rel="alternate" hreflang="en" href="https://age-calculator-mu-two.vercel.app/en/birthday-countdown.html">
+  <title>Birthday Countdown Calculator | Days Until My Birthday</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EZW95TCSF"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-3EZW95TCSF');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4587553505034907" crossorigin="anonymous"></script>
+  <style>body{margin:0;color:#20213a;background:#f7f7ff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}header,main,footer{width:min(920px,calc(100% - 32px));margin:auto}header{padding:42px 0 22px}h1{font-size:clamp(30px,6vw,46px);margin:0 0 10px}p{line-height:1.75}.section{margin:18px 0;padding:22px;border:1px solid #e0e7ff;border-radius:16px;background:#fff}.links a{display:inline-block;margin:5px 10px 5px 0;color:#4f46e5;font-weight:800}input{padding:12px;border:1px solid #d7daf0;border-radius:10px;font:inherit}.result{margin-top:14px;color:#4f46e5;font-size:26px;font-weight:900}</style>
+</head>
+<body><header><h1>Birthday Countdown Calculator</h1><p>Enter your birthday and see how many days are left until the next one.</p></header><main>
+<section class="section"><label for="birthday"><strong>Birthday</strong></label> <input id="birthday" type="date"><div id="result" class="result">Enter your birthday.</div></section>
+<section class="section"><h2>How it works</h2><p>If your birthday has not passed this year, the calculator counts down to this year's birthday. If it already passed, it counts down to next year's birthday. For February 29 birthdays, non-leap years are treated as February 28.</p></section>
+<section class="section links"><h2>Related calculators</h2><a href="/en.html">Age calculator</a><a href="/en/korean-age-calculator.html">Korean age calculator</a><a href="/en/school-age-calculator.html">School age calculator</a><a href="https://dday-calculator-seven.vercel.app/en.html">D-Day calculator</a></section>
+</main><footer><a href="/privacy.html">Privacy and ads notice</a></footer><script>const b=document.getElementById('birthday'),r=document.getElementById('result');let tracked=false;b.addEventListener('change',()=>{const val=b.value;if(!val){r.textContent='Enter your birthday.';return}const today=new Date(),base=new Date(today.getFullYear(),today.getMonth(),today.getDate()),p=val.split('-').map(Number);let next=birthdayInYear(p,today.getFullYear());if(next<base)next=birthdayInYear(p,today.getFullYear()+1);const days=Math.round((next-base)/86400000);r.textContent=days===0?'Today is your birthday.':`${days} days until your birthday.`;if(!tracked){gtag('event','birthday_countdown_en');tracked=true}});function birthdayInYear(parts,year){const d=new Date(year,parts[1]-1,parts[2]);if(parts[1]===2&&parts[2]===29&&d.getMonth()!==1)return new Date(year,1,28);return d}</script></body></html>
